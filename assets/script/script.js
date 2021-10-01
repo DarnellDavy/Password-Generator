@@ -46,13 +46,15 @@ function generatePassword() {
       totalCharacters = totalCharacters.concat(specialCharString) 
       console.log(totalCharacters)
     }
+
+    if (totalCharacters.length === 0) {
+      alert("Please choose at least one type of character")
+      findCharacters()
+    }
+
   }
 
   findCharacters()
-
-  if (totalCharacters.length === 0) {
-    findCharacters()
-  }
 
 var passLength;
 function getLength(){
@@ -72,7 +74,7 @@ getLength()
   }
   console.log("password length = " + passLength)
 
-  var password;
+  var password = "";
 for(var i = 0; i < passLength; i++) {
   var index = Math.floor (Math.random() * totalCharacters.length);
   password = password.concat(totalCharacters[index])
