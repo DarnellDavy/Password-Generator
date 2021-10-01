@@ -71,7 +71,17 @@ getLength()
     getLength()
   }
   console.log("password length = " + passLength)
+
+  var password;
+for(var i = 0; i < passLength; i++) {
+  var index = Math.floor (Math.random() * totalCharacters.length);
+  password = password.concat(totalCharacters[index])
 }
+
+return password;
+}
+
+
 
 
 
